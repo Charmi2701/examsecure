@@ -9,6 +9,7 @@ import StudentPage from '../components/students/student_page';
 import AddQuestions from '../components/addData/createTest/add_questions';
 import Tests from '../components/Tests/Tests';
 import Dashboard from '../components/ProctorDashboard/Dashboard';
+import ProctorMode from '../components/ProctorDashboard/ProctorMode.js';
 
 const routes = [
   {
@@ -65,6 +66,11 @@ const routes = [
     path: '/dashboard',
     component: Dashboard,
     title: 'Dashboard',
+  },
+  {
+    path: '/tests/:id/proctormode',
+    component: ProctorMode,
+    title: 'Proctor Mode',
   },
 ];
 

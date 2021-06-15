@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@examsecure/design-system';
+import { Link } from 'react-router-dom';
 
 const SingleTest = ({ test }) => {
   return (
@@ -25,7 +26,12 @@ const SingleTest = ({ test }) => {
           <Button variant={'secondary'} label={'More Details'} />
         </div>
         <div className="s-test-btn-2">
-          <Button variant={'secondary'} label={'Proctor Mode'} />
+          <Link to={'/tests/'+test.id+'/proctormode'} >
+            <Button 
+            variant={'secondary'} 
+            label={'Proctor Mode'} 
+            />
+          </Link>
         </div>
       </div>
     </div>
