@@ -25,7 +25,8 @@ export const uploadQuestions = (uploadQuestion) => {
                 },
             },
             question: uploadQuestion.question,
-            answer: 'q'+String(Number(uploadQuestion.qID)+1)+uploadQuestion.answer
+            answer: 'q'+String(Number(uploadQuestion.qID)+1)+uploadQuestion.answer,
+            marks: uploadQuestion.marks,
         }
         database.ref('questions/'+uploadQuestion.testname+'/'+uploadQuestion.qID).set(data).then(() => {
             console.log('UPLOADED QUESTION')

@@ -145,6 +145,7 @@ class AddQuestions extends Component {
     option4: '',
     answer: '1',
     duration: '0',
+    marks: 0,
     modalShow: false,
   };
   handleChange = (e) => {
@@ -187,6 +188,7 @@ class AddQuestions extends Component {
       option3: '',
       option4: '',
       answer: '1',
+      marks: 0,
     });
   };
   render() {
@@ -227,7 +229,7 @@ class AddQuestions extends Component {
                   </Button>
                 </div>
                 <div className="form-group px-5">
-                  <label htmlFor="exampleFormControlTextarea1">
+                  <label htmlFor="enter-question">
                     Enter Question
                   </label>
                   <textarea
@@ -239,7 +241,7 @@ class AddQuestions extends Component {
                   ></textarea>
                 </div>
                 <div className="form-group px-5">
-                  <label htmlFor="exampleFormControlTextarea1">Option 1</label>
+                  <label htmlFor="option-1">Option 1</label>
                   <input
                     type="text"
                     className="form-control"
@@ -250,7 +252,7 @@ class AddQuestions extends Component {
                   ></input>
                 </div>
                 <div className="form-group px-5">
-                  <label htmlFor="exampleFormControlTextarea1">Option 2</label>
+                  <label htmlFor="option-2">Option 2</label>
                   <input
                     type="text"
                     className="form-control"
@@ -261,7 +263,7 @@ class AddQuestions extends Component {
                   ></input>
                 </div>
                 <div className="form-group px-5">
-                  <label htmlFor="exampleFormControlTextarea1">Option 3</label>
+                  <label htmlFor="option-3">Option 3</label>
                   <input
                     type="text"
                     className="form-control"
@@ -272,7 +274,7 @@ class AddQuestions extends Component {
                   ></input>
                 </div>
                 <div className="form-group px-5">
-                  <label htmlFor="exampleFormControlTextarea1">Option 4</label>
+                  <label htmlFor="option-4">Option 4</label>
                   <input
                     type="text"
                     className="form-control"
@@ -296,6 +298,17 @@ class AddQuestions extends Component {
                     <option>3</option>
                     <option>4</option>
                   </select>
+                </div>
+                <div className="form-group px-5">
+                  <label htmlFor="question-marks">Marks</label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    id="marks"
+                    rows="1"
+                    onChange={this.handleChange}
+                    value={this.state.marks}
+                  ></input>
                 </div>
                 <button className="btn btn-primary mx-5 submit-button">
                   Submit
