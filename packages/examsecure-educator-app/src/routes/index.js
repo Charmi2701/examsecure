@@ -64,7 +64,7 @@ const routes = [
   {
     path: '/dashboard',
     component: Dashboard,
-    title: 'Tests',
+    title: 'Dashboard',
   },
 ];
 
